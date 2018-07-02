@@ -6,9 +6,8 @@ A Bootstrap based widget that shows float tank savings based on distance and num
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [jQuery](https://github.com/jquery/jquery)
+* [Bootstrap](https://github.com/twbs/bootstrap)
 
 ## Author
 
