@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Savings Calculator</title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio Page of John Irle">
+  <meta name="keywords" content="HTML, CSS, JavaScript, React, John, Irle">
+  <meta name="author" content="John Irle">
+
+  <script src="https://use.fontawesome.com/cded85bf7a.js"></script>
+
+  <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../vendors/css/bootstrap.min.css">
+  <link rel="image_src" href="../resources/img/JohnIrle.jpg" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://github.com/JohnIrle">John Irle</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse-main">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../#home">Home</a></li>
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#portfolio">Portfolio</a></li>
+          <li><a href="../#contact">Contact</a></li>
+          <li><a href="../blog/">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Financial Savings</h1>
+    <form>
+      <fieldset class="form-group">
+        <label for="time">How many times you currently/would like to float a month?</label>
+        <select class= "form-control" id="time">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+        </select>
+        <label for="cost">Cost per session. (Average in the U.S. is $50 to $75/hr)</label>
+        <select class="form-control" id="cost">
+          <option value="20">$20</option>
+          <option value="30">$30</option>
+          <option value="40">$40</option>
+          <option value="50">$50</option>
+          <option value="60">$60</option>
+          <option value="70">$70</option>
+          <option value="80">$80</option>
+          <option value="90">$90</option>
+          <option value="100">$100</option>
+          <option value="110">$110</option>
+          <option value="120">$120</option>
+        </select>
+
+        <hr />
+        <label for="costResult">Annual cost to pay to float at a center.</label>
+        <input type="text" class="form-control" id="costResult" disabled></input>
+
+        <label for="firstsavings">First year savings</label>
+        <input type="text" class="form-control" id="firstsavings" disabled></input>
+
+        <label for="secondsavings">Second year savings</label>
+        <input type="text" class="form-control" id="secondsavings" disabled></p>
+      </fieldset>
+    </form>
+    <hr />
+
+
+    <h1>Time Savings</h1>
+    <label for="drive">How long it takes to drive to your local float center. (1 way) in minutes?</label>
+    <input type="text" class="form-control" id="drive">
+
+    <label for="timeNum">How many times you currently / would like to float a month?</label>
+
+    <input type="text" class="form-control" id="timeNum" disabled>
+
+    <label for="timeResult">Extra time spent driving/year.</label>
+    <input type="text" class="form-control" id="timeResult" disabled>
+   </div>
+
+   <script src="../vendors/js/jquery-3.1.1.min.js"></script>
+   <script src="../vendors/js/bootstrap.min.js"></script>
+   <script src="script.js">
+
+   </script>
+  </body>
