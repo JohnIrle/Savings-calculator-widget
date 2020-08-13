@@ -17,7 +17,7 @@ function App() {
     });
 
     const [time, setTime] = useState({
-        timeResult: "8",
+        timeResult: "8 hours",
     });
 
     const { numTimes, cost, drive } = formData;
@@ -43,7 +43,9 @@ function App() {
         let trip = drive * numTimes * 2;
         let year = trip * 12;
         let hours = year / 60;
-        let minutes = hours / 60;
+        let minutes = hours * 60;
+
+        console.log("Hours: " + hours, " Minutes: " + minutes);
 
         if (hours < 1) {
             setTime({ ...time, timeResult: minutes + " minutes" });
@@ -76,6 +78,7 @@ function App() {
                                 max="30"
                                 name="numTimes"
                                 value={numTimes}
+                                size="sm"
                                 onChange={(e) => {
                                     onChange(e);
                                 }}
@@ -87,6 +90,7 @@ function App() {
                             <Form.Control
                                 as="select"
                                 name="cost"
+                                size="sm"
                                 onChange={(e) => {
                                     onChange(e);
                                 }}
@@ -113,6 +117,7 @@ function App() {
                                 type="text"
                                 name="costResult"
                                 value={`$${costResult}`}
+                                size="sm"
                                 disabled
                             />
 
@@ -121,6 +126,8 @@ function App() {
                                 type="text"
                                 id="firstsavings"
                                 value={`$${firstSavings}`}
+                                size="sm"
+                                className={firstSavings < 0 ? "red" : "green"}
                                 disabled
                             />
 
@@ -129,6 +136,8 @@ function App() {
                                 type="text"
                                 id="secondsavings"
                                 value={`$${secondSavings}`}
+                                size="sm"
+                                className={secondSavings < 0 ? "red" : "green"}
                                 disabled
                             />
                         </Form.Group>
@@ -144,17 +153,16 @@ function App() {
                         type="text"
                         name="drive"
                         value={drive}
+                        size="sm"
                         onChange={(e) => onChange(e)}
                     />
 
-                    <Form.Label>
-                        How many times you currently / would like to float a
-                        month?
-                    </Form.Label>
+                    <Form.Label>Float sessions per year.</Form.Label>
                     <Form.Control
                         type="text"
                         id="timeNum"
-                        value={numTimes}
+                        value={numTimes * 12}
+                        size="sm"
                         disabled
                     />
 
@@ -163,6 +171,8 @@ function App() {
                         type="text"
                         id="timeResult"
                         value={timeResult}
+                        size="sm"
+                        className="red"
                         disabled
                     />
                 </Jumbotron>

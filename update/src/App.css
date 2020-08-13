@@ -1,4 +1,12 @@
 body {
-  padding-top: 70px;
-  background-color: greenyellow !important;
+    padding-top: 70px;
+    background-color: bisque !important;
+}
+
+.red {
+    background-color: salmon !important;
+}
+
+.green {
+    background-color: lightgreen !important;
 }
