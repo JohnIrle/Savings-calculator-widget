@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./App.css";
-import NavBar from "./components/NavBar";
 import { Container, Form } from "react-bootstrap";
 
 function App() {
@@ -54,7 +53,7 @@ function App() {
     }
   };
 
-  const onChange = (e) => {
+  const onChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: [e.target.value] });
     calculateMoney();
     calculatetime();
@@ -62,9 +61,8 @@ function App() {
 
   return (
     <>
-      <NavBar />
       <Container>
-        <div class="container-fluid text-sm-center p-5 bg-light">
+        <div className="container-fluid text-sm-center p-5 bg-light">
           <h1>Financial Savings</h1>
           <Form>
             <Form.Group>
@@ -73,12 +71,10 @@ function App() {
                 <strong>{numTimes}</strong>{" "}
               </Form.Label>
               <Form.Range
-                type="range"
                 min="1"
                 max="30"
                 name="numTimes"
                 value={numTimes}
-                size="sm"
                 onChange={(e) => {
                   onChange(e);
                 }}
@@ -90,9 +86,7 @@ function App() {
                 as="select"
                 name="cost"
                 size="sm"
-                onChange={(e) => {
-                  onChange(e);
-                }}
+                onChange={(e) => onChange(e)}
                 value={cost}
               >
                 <option value="20">$20</option>
