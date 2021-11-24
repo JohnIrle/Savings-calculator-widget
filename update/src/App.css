@@ -1,12 +1,12 @@
 body {
-    padding-top: 70px;
-    background-color: bisque !important;
+  padding-top: 70px;
+  background-color: rgb(209, 199, 187) !important;
 }
 
 .red {
-    background-color: salmon !important;
+  background-color: salmon !important;
 }
 
 .green {
-    background-color: lightgreen !important;
+  background-color: lightgreen !important;
 }
